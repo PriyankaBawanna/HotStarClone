@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotstar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="Card.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="hamburger.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+      .image_container_ img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.image_container_ {
+  display: flex;
+}
+
+.image_ {
+  width: 160px;
+  height: 212px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.4s ease-in-out;
+  margin: 0 10px;
+}
+
+.image_:hover {
+  transform: scale(1.2);
+}
+
+.image_::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(4, 8, 15, 0),
+    var(--BG_COLOR_L1),
+    var(--BG_COLOR_L1)
+  );
+  z-index: 2;
+  transition: 0.5s all;
+  opacity: 0;
+}
+
+.image_:hover:before {
+  opacity: 1;
+}
+
+.image_ img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+}
+
+.image_ .details {
+  position: absolute;
+  bottom: 12px;
+  z-index: 3;
+  color: #fff;
+  opacity: 0;
+  font-size: 9px;
+  transform: scale(1.2);
+  transition: 0.5s all;
+}
+
+.details {
+  margin: 0 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 70px;
+  max-width: 117px;
+}
+
+.image_:hover .details {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.heading_container {
+  color: white;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.movies_container {
+  /* background: var(--BG_GRADIENT_L0); */
+/*  padding: 20px;*/
+}
+
+.text_svg_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.watch_movie_svg {
+  margin: 0 5px 0 0;
+  width: 7px;
+  /* margin-bottom: 2px; */
+}
+
+.text_svg_container:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+
+.add_to_watchlist_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 5px 0 2px;
+  height: 13px;
+}
+
+.add_to_watchlist_svg {
+  margin: 0 4px 0 0;
+  width: 12px;
+  /* margin-bottom: 2px; */
+}
+
+.add_to_watchlist_container:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+
+.add_to_watchlist_text,
+.watch_movie_text {
+  font-size: 8px;
+}
+
+.gardiant {
+  position: relative;
+  height: 450px;
+  width: 550px;
+  background: linear-gradient(to right, #030b17, rgba(0, 0, 0, 0));
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  left: 111.5%;
+  margin-top: -5px;
+}
+.logo
+{
+  margin-top: 10px;
+}
+    </style>
+  </head>
+  <body>
+    <div class="mainbody">
+      <div class="heade">
+        <div class="hamburger">
+        
+            <div class="btn-hamburger">
+      <svg viewbox="0 0 100 80" width="20" height="17">
+        <rect width="100" height="10"></rect>
+        <rect y="30" width="100" height="10"></rect>
+        <rect y="60" width="100" height="10"></rect>
+      </svg>
+      <div class="submenu">
+        <a href="/">
+          <div class="dropdown"><i class="fa fa-desktop"></i> Channels</div>
+        </a>
+        <a href="/">
+          <div class="dropdown"><i class="fa fa-language"></i>Languages</div>
+        </a>
+        <a href="/">
+          <div class="dropdown"><i class="fa fa-clone"></i>Genres</div>
+        </a>
+      </div>
+    </div>
+      
+    
+    
+    
+    
+    
+      
+      
+        </div>
+           <div class="logo">
+     <img src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg" alt="">
+    
+   </div>
+  
+        <div class="TV">
+          <div class="headdropdown">
+            <button class="dropbtn">TV</button>
+            <div class="dropdown-content-tv">
+              <a href="#">Hotstar Specials</a>
+              <a href="#">Quix</a>
+              <a href="#">Star jalsha</a>
+              <a href="#">star Vijay</a>
+              <a href="#">Star Bharat</a>
+              <a href="#">Asianet</a>
+              <a href="#">star Maa</a>
+              <a href="#">more..</a>
+            </div>
+          </div>
+        </div>
+        <div class="movies">
+          <!--Movie-->
+          <div class="headdropdown">
+            <button class="dropbtn">Movies</button>
+            <div class="dropdown-content-tv">
+              <a href="#">hindi</a>
+              <a href="#">Bengali</a>
+              <a href="#">Telugu</a>
+              <a href="#">Malayalam</a>
+              <a href="#">Tamil</a>
+              <a href="#">Mrathi</a>
+              <a href="#">English</a>
+              <a href="#">Kannada</a>
+            </div>
+          </div>
+        </div>
+        <div class="sports">
+          <!--Sports-->
+          <div class="headdropdown">
+            <button class="dropbtn">Sports</button>
+            <div class="dropdown-content-tv">
+              <a href="#">Cricket </a>
+              <a href="#">Football</a>
+              <a href="#">Kabaddi</a>
+              <a href="#">Tennis </a>
+              <a href="#">Formula 1</a>
+              <a href="#">eSports</a>
+              <a href="#">Fromula E</a>
+              <a href="#">Martial Arts</a>
+              <a href="#">Basketball</a>
+
+              <a href="#"> Badminton</a>
+              <a href="#">Hockey</a>
+              <a href="#">Athletics</a>
+              <a href="#"> Golf</a>
+              <a href="#">Wrestling</a>
+              <a href="#">Table Tennis</a>
+              <a href="#">Khelo India</a>
+            </div>
+          </div>
+        </div>
+        <div class="disney">
+          <!--Disney+-->
+          <div class="headdropdown">
+            <button class="dropbtn">Disney+</button>
+          </div>
+        </div>
+        <div class="logokids">
+          <img
+            src="https://www.hotstar.com/assets/4aa70ede8904e16b7630300c09219c8e.svg"
+            alt=""
+          />
+        </div>
+        <div class="inputsearch">
+          <div class="imput">
+            <input type="search" class="Search" placeholder="Search.." />
+            <div class="seaacrh_bar">
+              <span style="color: rgb(163, 163, 163)" class="material-icons"
+                >search</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="button_subscribe">
+          <button type="button" id="search_btn"><b>Subscribe</b></button>
+        </div>
+        <div class="loginbtn">
+          <div class="login_btn">
+            <h5>LOGIN</h5>
+          </div>
+        </div>
+        <!--Head ends here-->
+      </div>
+      <div class="sliderpart">
+        <div class="owl-carousel owl-theme">
+          <div class="item1">
+            <div class="textArea">
+                  <div class="gardiant"></div>
+              <div class="content-holder">
+                <div class="title"><h2>Bigg Boss</h2></div>
+                <div class="toptitle">
+                  <span class="meta-data"><b>Star Maa .</b></span>
+                  <span class="meta-data"><b>Telugu .</b></span>
+                  <span class="meta-data"><b>Reality</b></span>
+                </div>
+                <div class="description">
+                  <pre>
+                NEW EP WILL BE AVAILABLE AT 10 PM. It's time for real
+                entertainment! King Nagarjuna is back with a new interesting
+                mix of contestants who are all set ...
+
+                    </pre
+                  >
+                </div>
+              </div>
+              <div class="image_gradien"></div>
+              <div class="imagepart">
+            
+                  <img
+                    src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/2687/1052687-h-20cbf695bb0a"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+              <div class="item2">
+       <div class="textArea2">
+           <div class="gardiant"></div>
+      <div class="content-holder2">
+        <div class="title2"><h2>Pandian Stores</h2></div>
+        <div class="toptitle2">
+          <span class="meta-data2"><b>Star Maa .</b></span>
+          <span class="meta-data2"><b>Telugu .</b></span>
+          <span class="meta-data2"><b>Reality</b></span>
+        </div>
+        <div class="description2">
+          <pre>
+         Sathyamoorthy and his wife Dhanalakshmi sacrifice a lot to raise 
+         his brothers Kathir, Jeeva and Kannan. Will things change when 
+         the brothers get married?
+
+
+        </pre>
+        </div>
+      </div>
+      <div class="image_gradien2"></div>
+      <div class="imagepart2">
+    
+          <img
+            src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1_5x/sources/r1/cms/prod/8744/958744-h"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+                  <div class="item3">
+       <div class="textArea3">
+           <div class="gardiant"></div>
+      <div class="content-holder3">
+        <div class="title3"><h2>Janaki Kalaganaledu</h2></div>
+        <div class="toptitle3">
+          <span class="meta-data3"><b>Star Maa .</b></span>
+          <span class="meta-data3"><b>Telugu .</b></span>
+          <span class="meta-data3"><b>Reality</b></span>
+        </div>
+        <div class="description3">
+          <pre>
+          Putting her IPS hopes aside, Janaki marries Ramachandra, 
+          a confectioner from a traditional family. Will Rama defy 
+          his mother and help Janaki fulfil he...
+         
+         
+
+
+        </pre>
+        </div>
+      </div>
+      <div class="image_gradien3"></div>
+      <div class="imagepart3">
+    
+          <img
+            src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/7244/937244-h"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+
+                      <div class="item4">
+       <div class="textArea4">
+           <div class="gardiant"></div>
+      <div class="content-holder4">
+        <div class="title4"><h2>Yeh Rishta Kya Kehlata Hai </h2></div>
+        <div class="toptitle4">
+          <span class="meta-data4"><b>Star Plus .</b></span>
+          <span class="meta-data4"><b>Hindi.</b></span>
+          <span class="meta-data4"><b>Love</b></span>
+        </div>
+        <div class="description4">
+          <pre>
+          After the tragic loss of Naira, Kartik comes across her lookalike Sirat, 
+          a hardworking boxer. As he slowly forms a bond with her, 
+          will love find its way back?
+          
+          
+         
+         
+
+
+        </pre>
+
+        </div>
+      </div>
+      <div class="image_gradien4"></div>
+      <div class="imagepart4">
+    
+          <img
+            src="https://img1.hotstarext.com/image/upload/f_auto,t_web_m_0_5x/sources/r1/cms/prod/9260/889260-h"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+          </div>
+         
+         
+          </div>
+         
+
+           <div class="movies_container "
+           style="background-color:#192133;">
+          <div class="heading_container" >
+            <h2>Latest & Trending</h2>
+          </div>
+          <div class="image_container_">
+            <div class="image_">
+              <img
+                src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/5472/1055472-v-4fac4c4e1978"
+                alt="hotstarimg"
+                class="image___"
+              />
+              <div class="details">
+                <div class="movie_name">Cruells</div>
+                <div class="movie_timing">2 hr and 13 min,</div>
+                <span>Crime, Comedy, English, Hindi, Tamil, Telugu, 2021</span>
+                <div class="description"></div>
+                <div class="text_svg_container">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="12"
+                    viewbox="0 0 20 24"
+                    class="watch_movie_svg"
+                  >
+                    <g fill="none" fill-rule="evenodd">
+                      <path d="M-4 0h24v24H-4z" />
+                      <path
+                        fill="#FFF"
+                        x2="50%"
+                        y2="40%"
+                        d="M0 21.07c0 2.209 1.535 3.059 3.406 1.913l14.537-8.897c1.881-1.152 1.871-3.025 0-4.17l-14.537-8.9C1.526-.133 0 .729 0 2.93v18.14z"
+                        opacity="1"
+                      />
+                    </g>
+                  </svg>
+                  <span class="watch_movie_text">WATCH MOVIE</span>
+                </div>
+                <div class="add_to_watchlist_container">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewbox="0 0 24 24"
+                    width="24px"
+                    fill="grey"
+                    class="add_to_watchlist_svg"
+                  >
+                    <path d="M0 0h24v24H0V0z" fill="none" />
+                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                  </svg>
+                  <span class="add_to_watchlist_text">ADD TO WATCHLIST</span>
+                </div>
+              </div>
+            </div>
+            <div class="image_">
+              <img
+                src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/8256/1038256-v-59a659b25342"
+                alt="hotstarimg"
+                class="image___"
+              />
+              <div class="details">
+                <div class="movie_name">Cruells</div>
+                <div class="movie_timing">2 hr and 13 min,</div>
+                <span>Crime, Comedy, English, Hindi, Tamil, Telugu, 2021</span>
+                <div class="description"></div>
+                <div class="text_svg_container">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="12"
+                    viewbox="0 0 20 24"
+                    class="watch_movie_svg"
+                  >
+                    <g fill="none" fill-rule="evenodd">
+                      <path d="M-4 0h24v24H-4z" />
+                      <path
+                        fill="#FFF"
+                        x2="50%"
+                        y2="40%"
+                        d="M0 21.07c0 2.209 1.535 3.059 3.406 1.913l14.537-8.897c1.881-1.152 1.871-3.025 0-4.17l-14.537-8.9C1.526-.133 0 .729 0 2.93v18.14z"
+                        opacity="1"
+                      />
+                    </g>
+                  </svg>
+                  <span class="watch_movie_text">WATCH MOVIE</span>
+                </div>
+                <div class="add_to_watchlist_container">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="24"
+                    height="24"
+                    viewbox="0 0 24 24"
+                    class="add_to_watchlist_svg"
+                  >
+                    <defs>
+                      <filter
+                        width="166.7%"
+                        height="183.3%"
+                        x="-33.3%"
+                        y="-33.3%"
+                        filterunits="objectboundingbox"
+                      >
+                        <feoffset
+                          dy="2"
+                          in="SourceAlpha"
+                          result="shadowOffsetOuter1"
+                        />
+                        <fegaussianblur
+                          in="shadowOffsetOuter1"
+                          result="shadowBlurOuter1"
+                          stddeviation="1"
+                        />
+                        <fecolormatrix
+                          in="shadowBlurOuter1"
+                          result="shadowMatrixOuter1"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"
+                        />
+                        <feoffset
+                          in="SourceAlpha"
+                          result="shadowOffsetOuter2"
+                        />
+                        <fegaussianblur
+                          in="shadowOffsetOuter2"
+                          result="shadowBlurOuter2"
+                          stddeviation="1"
+                        />
+                        <fecolormatrix
+                          in="shadowBlurOuter2"
+                          result="shadowMatrixOuter2"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"
+                        />
+                        <femerge>
+                          <femergenode in="shadowMatrixOuter1" />
+                          <femergenode in="shadowMatrixOuter2" />
+                        </femerge>
+                      </filter>
+                      <path
+                        d="M17.595 8.189c.465-.463.554-1.219.14-1.726-.478-.583-1.341-.615-1.86-.096L12.267 9.97c-.143.143-.376.143-.52 0L8.19 6.417c-.463-.463-1.219-.551-1.727-.137-.584.477-.616 1.338-.096 1.857l3.608 3.603c.143.144.143.376 0 .52l-3.551 3.547c-.473.472-.559 1.246-.124 1.753.25.293.602.44.953.44.321 0 .642-.123.887-.367l3.607-3.603c.144-.144.377-.144.52 0l3.608 3.603c.244.244.565.367.886.367.351 0 .703-.147.954-.44.434-.507.349-1.281-.124-1.753l-3.552-3.548c-.143-.143-.143-.375 0-.519l3.556-3.551z"
+                      />
+                    </defs>
+                    <g
+                      fill="none"
+                      fill-rule="evenodd"
+                      transform="rotate(45 12 12)"
+                    >
+                      <use
+                        fill="#000"
+                        filter="url(#prefix__a)"
+                        xlink:href="#prefix__b"
+                      />
+                      <use fill="#B0B0B0" xlink:href="#prefix__b" />
+                    </g>
+                  </svg>
+                  <span class="add_to_watchlist_text">ADD TO WATCHLIST</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="image_">
+              <img
+                src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/1443/1041443-v-d54a72e03146"
+                alt="bhuj"
+                class="image___"
+              />
+              <div class="details">
+                <span>Bhuj: The Pride of India</span>
+                <span
+                  >1 hr and 53 min, Action, Historical, Hindi, Tamil, Telugu,
+                  2021
+                </span>
+                <span
+                  >Running against the clock, IAF Squadron Leader Vijay
+                  Karnik...</span
+                >
+              </div>
+            </div>
+            <div class="image_">
+              <img
+                src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/2213/1042213-v-1416e8e25397"
+                alt="bhuj"
+                class="image___"
+              />
+              <div class="details">
+                <span>Bhuj: The Pride of India</span>
+                <span
+                  >1 hr and 53 min, Action, Historical, Hindi, Tamil, Telugu,
+                  2021
+                </span>
+                <span
+                  >Running against the clock, IAF Squadron Leader Vijay
+                  Karnik...</span
+                >
+              </div>
+            </div>
+            <div class="image_">
+              <img
+                src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/5074/1045074-v-34e0952080cf"
+                alt="bhuj"
+                class="image___"
+              />
+              <div class="details">
+                <span>Bhuj: The Pride of India</span>
+                <span
+                  >1 hr and 53 min, Action, Historical, Hindi, Tamil, Telugu,
+                  2021
+                </span>
+                <span
+                  >Running against the clock, IAF Squadron Leader Vijay
+                  Karnik...</span
+                >
+              </div>
+            </div>
+            <div class="image_">
+              <img
+                src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/5763/1045763-v-1d9f41f00c89"
+                alt="bhuj"
+                class="image___"
+              />
+              <div class="details">
+                <span>Bhuj: The Pride of India</span>
+                <span
+                  >1 hr and 53 min, Action, Historical, Hindi, Tamil, Telugu,
+                  2021
+                </span>
+                <span
+                  >Running against the clock, IAF Squadron Leader Vijay
+                  Karnik...</span
+                >
+              </div>
+            </div>
+            <div class="image_">
+              <img
+                src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/8632/1048632-v-380ed721403f"
+                alt="bhuj"
+                class="image___"
+              />
+              <div class="details">
+                <span>Bhuj: The Pride of India</span>
+                <span
+                  >1 hr and 53 min, Action, Historical, Hindi, Tamil, Telugu,
+                  2021
+                </span>
+                <span
+                  >Running against the clock, IAF Squadron Leader Vijay
+                  Karnik...</span
+                >
+              </div>
+            </div>
+            <div class="image_">
+              <img
+                src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/1472/1051472-v-34c24c5361ee"
+                alt="bhuj"
+                class="image___"
+              />
+              <div class="details">
+                <span>Bhuj: The Pride of India</span>
+                <span
+                  >1 hr and 53 min, Action, Historical, Hindi, Tamil, Telugu,
+                  2021
+                </span>
+                <span
+                  >Running against the clock, IAF Squadron Leader Vijay
+                  Karnik...</span
+                >
+              </div>
+            </div>
+              <div class="image_">
+    <img
+      src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/2944/1052944-v-0ed37e31f3a3"
+      alt="bhuj"
+      class="image___"
+    />
+    <div class="details">
+      <span>Bhuj: The Pride of India</span>
+      <span
+        >1 hr and 53 min, Action, Historical, Hindi, Tamil, Telugu,
+        2021
+      </span>
+      <span
+        >Running against the clock, IAF Squadron Leader Vijay
+        Karnik...</span
+      >
+    </div>
+  </div>
+    <div class="image_">
+    <img
+      src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/2688/1052688-v-33160b2f1eb2"
+      alt="bhuj"
+      class="image___"
+    />
+    <div class="details">
+      <span>Bhuj: The Pride of India</span>
+      <span
+        >1 hr and 53 min, Action, Historical, Hindi, Tamil, Telugu,
+        2021
+      </span>
+      <span
+        >Running against the clock, IAF Squadron Leader Vijay
+        Karnik...</span
+      >
+    </div>
+  </div>
+    <div class="image_">
+    <img
+      src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/2142/1052142-v-7280124e77a1"
+      alt="bhuj"
+      class="image___"
+    />
+    <div class="details">
+      <span>Bhuj: The Pride of India</span>
+      <span
+        >1 hr and 53 min, Action, Historical, Hindi, Tamil, Telugu,
+        2021
+      </span>
+      <span
+        >Running against the clock, IAF Squadron Leader Vijay
+        Karnik...</span
+      >
+    </div>
+  </div>
+          </div>
+        </div>
+      </div>
+         
+         
+        
+
+        
+             <div class="Popula_Channelimg">
+     <div class="text_Head">
+      <h3> 
+        Popular Genres
+        </h3>
+         <div class="channel_sectionimg">
+     <div class="channel_1img" id ="Romance">
+         <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/old_images/GENRE/928/928/928-h" alt=""
+         class="chanel_imagimg">
+        
+     </div>
+      <div class="channel_2img" id="ganpatibaba">
+     <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/4609/214609-v" alt=""
+     class="chanel_imag2img">
+ </div>
+
+       <div class="channel_4img">
+     <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/1992/311992-v" alt=""
+     class="chanel_imag4img">
+ </div>
+ 
+       <div class="channel_5img">
+     <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/old_images/GENRE/926/926/926-h" alt=""
+     class="chanel_imag5img">
+ </div>
+        <div class="channel_5img">
+     <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/1998/921998-v" alt=""
+     class="chanel_imag5img">
+ </div>
+        <div class="channel_5img">
+     <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/2213/1042213-v-1416e8e25397" alt=""
+     class="chanel_imag5img">
+ </div>
+        <div class="channel_5img">
+     <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/old_images/GENRE/924/924/924-h" alt=""
+     class="chanel_imag5img"a href="https://www.hotstar.com/in/koffee-shots-with-karan/1260067749"></a>
+ </div>
+ 
+ </div>
+        
+   </div>
+    </div>
+    <!--------------->
+    
+        
+             <div class="Popula_Channel">
+     <div class="text_Head">
+      <h3> 
+        Popular channel
+        </h3>
+         <div class="channel_section">
+     <div class="channel_1">
+         <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/1132/661132-h" alt=""
+         class="chanel_imag">
+     </div>
+      <div class="channel_2">
+     <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/6620/776620-h" alt=""
+     class="chanel_imag2">
+ </div>
+
+       <div class="channel_4">
+     <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/1121/661121-h" alt=""
+     class="chanel_imag4">
+ </div>
+ 
+       <div class="channel_5">
+     <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/1137/661137-h" alt=""
+     class="chanel_imag5">
+ </div>
+        <div class="channel_5">
+     <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/1119/661119-h" alt=""
+     class="chanel_imag5">
+ </div>
+        <div class="channel_5">
+     <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/1122/661122-h" alt=""
+     class="chanel_imag5">
+ </div>
+        <div class="channel_5">
+     <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/1137/661137-h" alt=""
+     class="chanel_imag5"a href="https://www.hotstar.com/in/koffee-shots-with-karan/1260067749"></a>
+ </div>
+ 
+ </div>
+        
+   </div>
+    </div>
+  
+  
+
+
+
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+        <!--Footer-->
+
+
+
+        <!--Footer-->
+    <footer>
+      <div class="footer-left">
+        <div class="footer-list">
+          <ul class="footer-list-ul">
+            <li class="footer-list-ul-li">About Hotstar</li>
+            <li class="footer-list-ul-li">Terms of Use</li>
+            <li class="footer-list-ul-li">Privacy Policy</li>
+            <li class="footer-list-ul-li">FAQ</li>
+            <li class="footer-list-ul-li">Feedback</li>
+            <li class="footer-list-ul-li">Careers</li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <p>
+            © 2021 STAR. All Rights Reserved. HBO, Home Box Office and all
+            related channel and programming logos are service marks of, and all
+            related programming visuals and elements are the property of, Home
+            Box Office, Inc. All rights reserved.
+          </p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-right-content">
+          <div class="footer-text">
+            Connect with us<br />
+            <img src="./img/fb-tw-icon.svg" alt="" />
+            <img class="fb-hover" src="./img/fb-tw-icon-hover.svg" alt="" />
+          </div>
+          <div class="hotstar-text">
+            Hotstar App<br />
+            <img src="./img/play-stores.svg" alt="" />
+            <img
+              class="playstore-hover"
+              src="./img/play-stores-hover.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+         
+      
+      
+        
+
+
+
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+  
+  
+
+
+
+
+ 
+ 
+
+      
+      
+
+
+    
+    
+
+  
+  
+    </div>
+
+    <!--mainbody ends here-->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript">
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        autoplay: true,
+        /*  autoplay: 1000,*/
+        stagePadding: 50,
+        dots: false,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 1,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

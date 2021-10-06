@@ -1,0 +1,99 @@
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /*  margin: 100px 50px;*/
+  color: rgb(161, 161, 161);
+  background-color: #192133;
+  height: 235px;
+  width: 2030px;
+
+  /*  margin-top: -2px;
+  margin-left: -5px;*/
+  font-size: 1.5rem;
+  margin-left: -10px;
+  margin-right: -20px;
+}
+.footer-text {
+  font-size: 2.5rem;
+}
+/*footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /*margin: 100px 50px;
+  color: rgb(161, 161, 161);
+  background-color: #141b29;
+  height: 349px;
+  width: 110%;
+  margin-top: -2px;
+  margin-left: -46px;
+}*/
+.footer-left,
+.footer-right {
+  width: 50%;
+}
+
+.footer-list-ul {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+.footer-list-ul-li {
+  padding-right: 30px;
+  list-style-type: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 35px;
+}
+.footer-list-ul-li:hover {
+  color: #1f80e0;
+}
+.footer-copyright {
+  font-size: 12px;
+  line-height: 2;
+}
+
+.footer-right-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer-text,
+.hotstar-text {
+  font-size: 1rem;
+  margin-top: 35px;
+}
+.footer-text img,
+.hotstar-text img {
+  margin-top: 10px;
+}
+.fb-hover {
+  position: relative;
+  bottom: 100px;
+  display: none;
+}
+.playstore-hover {
+  position: relative;
+  bottom: 102px;
+  display: none;
+}
+.footer-text img:hover ~ .fb-hover {
+  display: block;
+  cursor: pointer;
+}
+.hotstar-text img:hover ~ .playstore-hover {
+  display: block;
+  cursor: pointer;
+}
+.footer-text,
+.hotstar-text {
+  font-size: 1.5rem;
+}
+
+.footer-list-ul-li {
+  font-size: 1.5rem;
+}
+.footer-copyright {
+  font-size: 1rem;
+  margin-left: 35px;
+}
